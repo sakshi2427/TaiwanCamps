@@ -19,8 +19,9 @@ module TaiwanCamps
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # i18n config
+    # Locales are supported by our app
     config.i18n.available_locales = [:en, :zh]
-    config.i18n.default_locale = :zh
+    # Our default locale
+    config.i18n.default_locale = :en
   end
 end
