@@ -31,3 +31,12 @@
 
 en:
   hello: "Hello world"
+  language:
+    english: "English"
+    traditional_chinese: "中文"
+
+  home:
+    title: "List of campsites"
+  # campsite:
+  #     index:
+  #       title: "List of campsites"
