@@ -1,25 +1,63 @@
-# README
+# TAIWAN CAMPS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![3](https://user-images.githubusercontent.com/87069685/199387450-399fe090-4d41-41e4-a469-b9bdf571a4d0.png)
 
-Things you may want to cover:
+A campsite directory web application with Ruby on Rails.
 
-* Ruby version
+## Table of contents
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
 
-* System dependencies
+## Technologies
 
-* Configuration
+Back: 
+* Ruby 3.1.2
+* [Rails 7.0.4](https://guides.rubyonrails.org/7_0_release_notes.html)
 
-* Database creation
+Gem: 
+* [Devise](https://github.com/heartcombo/devise)
+* [I18n](https://guides.rubyonrails.org/i18n.html)
+* [stimulus-rails](https://github.com/hotwired/stimulus-rails)
+* [turbo-rails](https://github.com/hotwired/turbo-rails)
+* [Administrate](https://github.com/thoughtbot/administrate)
 
-* Database initialization
+- Front: [Bootstrap 5 (customized)](https://getbootstrap.com/docs/5.2/customize/overview/)
+- Test : TDD - to be confirmed
+- Database: [PostgreSQL](https://www.postgresql.org/docs/)
+- Hosting: [Railway](https://docs.railway.app/)
+	
+## Setup
 
-* How to run the test suite
+Clone the repository
+```
+git git@github.com:PaulineTW/taiwan-camps.git
+cd taiwan-camps
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+First, install the gems required by the application:
+```
+$ bundle install
+```
 
-* Deployment instructions
+Initialize the database
+```
+$ bin/setup
+```
 
-* ...
-# taiwan-camps
+Start rails server
+```
+$ bin/dev
+```
+
+You can find your app now by pointing your browser to http://localhost:3000. 
+
+Run Test
+```
+$ bin/rails test:system
+$ bin/rails test:all
+```
+
+## Features
+
+To be coming...
