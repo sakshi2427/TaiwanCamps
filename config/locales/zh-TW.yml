@@ -1,8 +1,5 @@
 zh:
-  hello: "你好"
+  welcome_html: "你好"
   language:
     english: "English"
     traditional_chinese: "中文"
-
-  home:
-    title: "营地列表"

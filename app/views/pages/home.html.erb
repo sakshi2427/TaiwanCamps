@@ -1,6 +1,38 @@
-<h1>This is the home page</h1>
+<%# <%= t('welcome_html', username: @current_user.first_name) %>
+<%# <p><%= l Time.now, format: :short %></p>
 
+<div class="banner card text-bg-dark">
+  <%# <img src="app/assets/images/main_photo.png" class="card-img" alt="camping under the stars"> %>
+  <%= image_tag "main_photo.png", class:"card-img", alt:"camping under the stars" %>
+  <div class="card-img-overlay">
+    <h1 class="card-title"><%= t('home.title') %></h1>
+    <h2 class="card-text"><%= t('home.subtitle') %></h2>
+  </div>
+</div>
 
-<h2><%= t("hello") %></h2>
+<div class="container p-4">
+  <h2 class="header"><%= t('home.header') %></h2>
+  <div class="cards">
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('glamping.png') %>)">
+        <%= t('home.glamping') %>
+      </div>
+    <% end %>
 
-<%= t('home.title') %>
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('private.png') %>)">
+        <%= t('home.private') %>
+      </div>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('wild.png') %>)">
+        <%= t('home.wild') %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+<button type="button" class="btn btn-green-dark">Primary</button>
+<br>

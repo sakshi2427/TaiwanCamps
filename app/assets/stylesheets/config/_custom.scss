@@ -1,0 +1,62 @@
+// This is where you override default Bootstrap variables
+// 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+// 3. You can override them below!
+@import "fonts";
+@import "colors";
+
+/* ------- customization-------- */
+
+// General style
+$body-bg:                 $white-bg !default;
+$body-color:              $white !default;
+
+// Font
+$font-family-sans-serif:  $primary-font !default;
+$font-size-base:              1rem !default; // browser default, typically `16px`
+$font-size-lg:                1.25rem !default;
+$font-size-sm:                .875rem !default;
+
+// Original variables and colors
+$theme-colors: (
+  "light":        $grey-light,
+  "dark":         $grey-dark,
+) !default;
+
+// Custom variales and colors
+$custom-colors: (
+  "green-dark":   $green-dark,
+  "green":        $green,
+  "green-light":  $green-light,
+  "brown-dark":   $brown-dark,
+  "brown":        $brown,
+  "brown-light":  $brown-light,
+  "grey-light":   $white,
+  "white-bg":     $white-bg,
+) !default;
+
+// Remove from maps
+$theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "danger", "warning");
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// $body-color: $white !default;
+// $primary:    $primary-dark !default;
+// $success:    $primary !default;
+// $info:       $primary-light !default;
+// $danger:     $secondary-dark !default;
+// $warning:    $secondary !default;
+// // missing $secondary-light
+// $light:      $light-grey !default;
+// $dark:       $dark-grey !default;
+
+// Buttons & inputs' radius
+$border-radius:    2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+// Override other variables below!
+
+// Required bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
