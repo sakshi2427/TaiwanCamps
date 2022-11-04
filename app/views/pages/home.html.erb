@@ -1,16 +1,11 @@
-<%# <%= t('welcome_html', username: @current_user.first_name) %>
-<%# <p><%= l Time.now, format: :short %></p>
-
-<div class="banner card text-bg-dark">
-  <%# <img src="app/assets/images/main_photo.png" class="card-img" alt="camping under the stars"> %>
-  <%= image_tag "main_photo.png", class:"card-img", alt:"camping under the stars" %>
-  <div class="card-img-overlay">
-    <h1 class="card-title"><%= t('home.title') %></h1>
-    <h2 class="card-text"><%= t('home.subtitle') %></h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('hero.png') %>);">
+  <div class="container">
+    <h1 class="card-title pb-4 text-muted"><%= t('home.title') %></h1>
+    <h3 class="card-text text-muted"><%= t('home.subtitle') %></h3>
   </div>
 </div>
 
-<div class="container p-4">
+<div class="container p-4 camping-styple">
   <h2 class="header"><%= t('home.header') %></h2>
   <div class="cards">
     <%= link_to "#" do %>
@@ -33,37 +28,14 @@
   </div>
 </div>
 
-<br>
-<button type="button" class="btn btn-green-dark">Primary</button>
-<br>
+<div class="container p-4 map">
+</div>
 
-<br>
-<button type="button" class="btn btn-green">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-green-light">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-brown-light">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-brown">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-brown-dark">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-dark">Primary</button>
-<br>
-
-<br>
-<button type="button" class="btn btn-grey-light">Primary</button>
-<br>
-<br>
-<button type="button" class="btn btn-white-bg">Primary</button>
-<br>
+<div class="container p-4">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('secret_spot.png') %>);">
+    <div class="text-center">
+      <h1 class="card-title"><%= t('home.share_your_secret') %></h1>
+      <%= link_to t('home.post_a_campsite'), "#", class: "btn btn-white-bg" %>
+    </div>
+  </div>
+</div>

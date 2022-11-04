@@ -12,8 +12,9 @@ en:
   home:
     title: "All i need is a campsite and good company"
     subtitle: "Discover your nature stay for tonight"
-
     header: "Camping style"
     glamping: "Glamping"
     private: "Private Campsite"
     wild: "Wild Camping"
+    share_your_secret: "Share your secret spot"
+    post_a_campsite: "Post a campsite"

@@ -2,7 +2,7 @@
 // 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
 // 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
 // 3. You can override them below!
-// @import "fonts";
+
 @import "colors";
 
 /* ------- customization-------- */
@@ -29,7 +29,7 @@ $font-size-xxxxl:             2.5rem;   // 40px
 
 // Original variables and colors
 $theme-colors: (
-  "light":        $grey-light,
+  "light":        $white,
   "dark":         $grey-dark,
 ) !default;
 
@@ -41,7 +41,7 @@ $custom-colors: (
   "brown-dark":   $brown-dark,
   "brown":        $brown,
   "brown-light":  $brown-light,
-  "grey-light":   $white,
+  "grey-light":   $grey-light,
   "white-bg":     $white-bg,
 ) !default;
 
