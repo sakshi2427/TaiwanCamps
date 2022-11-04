@@ -2,20 +2,30 @@
 // 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
 // 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
 // 3. You can override them below!
-@import "fonts";
+// @import "fonts";
 @import "colors";
 
 /* ------- customization-------- */
 
 // General style
-$body-bg:                 $white-bg !default;
-$body-color:              $white !default;
+$body-bg:                 $white-bg;
+// $body-color:              $white !default;
 
-// Font
-$font-family-sans-serif:  $primary-font !default;
-$font-size-base:              1rem !default; // browser default, typically `16px`
-$font-size-lg:                1.25rem !default;
-$font-size-sm:                .875rem !default;
+/* set font variable customizations */
+$font-family-base: 'Poppins', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$headings-font-weight: 600;
+
+// Font size
+$font-size-base:              1rem;     // default 16px
+$font-size-lg:                1.125rem; // 18px
+$font-size-xl:                1.25rem;  // 20px
+$font-size-xxl:               1.5rem;   // 24px
+$font-size-xxxl:              2rem;     // 32px
+$font-size-xxxxl:             2.5rem;   // 40px
 
 // Original variables and colors
 $theme-colors: (
@@ -35,28 +45,15 @@ $custom-colors: (
   "white-bg":     $white-bg,
 ) !default;
 
-// Remove from maps
+// Remove default variables from maps
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "danger", "warning");
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-
-// $body-color: $white !default;
-// $primary:    $primary-dark !default;
-// $success:    $primary !default;
-// $info:       $primary-light !default;
-// $danger:     $secondary-dark !default;
-// $warning:    $secondary !default;
-// // missing $secondary-light
-// $light:      $light-grey !default;
-// $dark:       $dark-grey !default;
-
 // Buttons & inputs' radius
-$border-radius:    2px;
-$border-radius-lg: 2px;
-$border-radius-sm: 2px;
+$border-radius:    10rem;
 
-// Override other variables below!
+
 
 // Required bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
