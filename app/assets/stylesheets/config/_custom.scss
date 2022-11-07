@@ -53,7 +53,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Buttons & inputs' radius
 $border-radius:    10rem;
 
-
+// Link
+$link-decoration:  none;
+$link-color:       $grey-dark;
 
 // Required bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
