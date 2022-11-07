@@ -1,6 +1,7 @@
 en:
   welcome_html: "<b>Welcome %{first_name}!</b>"
   language:
+    language: "Language"
     english: "English"
     traditional_chinese: "中文"
 
