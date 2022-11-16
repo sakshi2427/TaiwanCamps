@@ -1,0 +1,9 @@
+<h1>Campsites#index</h1>
+
+<h1><%= t("Campsite") %><%=" (#{@campsites.length})"%></h1>
+  <% @campsites.each do |campsite| %>
+<li>
+    <%= t(:name) %><%= campsite.name %>
+    <%= t(:category) %><%= campsite.category.capitalize %>
+</li>
+  <% end %>

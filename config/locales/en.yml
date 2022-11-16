@@ -29,7 +29,22 @@ en:
     user:
       one: User
       other: Users
-      
+    campsite:
+      name: Name
+      category: Category
+      address: Address
+      postal_code: Postal_code
+      county: County
+      area: Area
+      website: Website
+      phone: Phone
+
+
+
+
+
+
+
 
   welcome_html: "<b>Welcome %{first_name}!</b>"
   language:
