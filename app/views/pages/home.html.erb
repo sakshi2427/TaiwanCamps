@@ -1,48 +1,48 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/hero.png') %>);">
   <div class="container">
-    <h1 class="card-title pb-4 text-white"><%= t('home.title') %></h1>
-    <h3 class="card-text text-white"><%= t('home.subtitle') %></h3>
+    <h1 class="card-title pb-4 text-white"><%= t('pages.home.hero.title') %></h1>
+    <h3 class="card-text text-white"><%= t('pages.home.hero.subtitle') %></h3>
   </div>
 </div>
 
 <div class="container p-4">
-  <h2 class="header pt-4 pb-4"><%= t('home.header') %></h2>
+  <h2 class="header pt-4 pb-4"><%= t('pages.home.camping_type.header') %></h2>
   <div class="cards">
     <%= link_to "#" do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/glamping.png') %>)">
-        <%= t('home.glamping') %>
+        <%= t('pages.home.camping_type.glamping') %>
       </div>
     <% end %>
 
     <%= link_to "#" do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/private.png') %>)">
-        <%= t('home.private') %>
+        <%= t('pages.home.camping_type.private') %>
       </div>
     <% end %>
 
     <%= link_to "#" do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/wild.png') %>)">
-        <%= t('home.wild') %>
+        <%= t('pages.home.camping_type.wild') %>
       </div>
     <% end %>
   </div>
 </div>
 
 <div class="container p-4">
-  <h2 class="header"><%= t('home.header_2') %></h2>
+  <h2 class="header"><%= t('pages.home.map_research.header') %></h2>
 </div>
 
 <div class="container p-4">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/secret_spot.png') %>);">
     <div class="text-center">
-      <h1 class="card-title"><%= t('home.share_your_secret') %></h1>
-      <%= link_to t('home.post_a_campsite'), "#", class: "btn btn-white-bg" %>
+      <h1 class="card-title"><%= t('pages.home.contribute.share_your_secret') %></h1>
+      <%= link_to t('pages.home.contribute.post_a_campsite'), "#", class: "btn btn-white-bg" %>
     </div>
   </div>
 </div>
 
 <div class="container pt-4 pb-8 map">
-  <h2 class="header"><%= t('home.header_3') %></h2>
+  <h2 class="header"><%= t('pages.home.locations.header') %></h2>
 </div>
 
 <div class="p-4">

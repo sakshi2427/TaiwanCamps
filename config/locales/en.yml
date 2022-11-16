@@ -5,53 +5,103 @@ en:
     english: "English"
     traditional_chinese: "中文"
 
+  pages:
+    home:
+      hero:
+        title: "All i need is a campsite and good company"
+        subtitle: "Discover your nature stay for tonight"
+      camping_type:
+        header: "Camping style"
+        glamping: "Glamping"
+        private: "Private Campsite"
+        wild: "Wild Camping"
+      map_research:
+        header: "Search on map"
+      contribute:
+        share_your_secret: "Share your secret spot"
+        post_a_campsite: "Post a campsite"
+      locations:
+        header: "Locations"
+        north: "North"
+        keelong: "Keelong"
+        taipei: "Taipei"
+        new_taipei: "New Taipei"
+        yilan: "Yilan"
+        taoyuan: "Taoyuan"
+        hsinchu: "Hsinchu"
+
+        central: "Central"
+        maoli: "Maoli"
+        taichung: "Taichung"
+        changhwa: "Changhwa"
+        nantou: "Nantou"
+        yunlin: "Yunlin"
+
+        south: "South"
+        chiayi: "Chiayi"
+        tainan: "Tainan"
+        kaohsiung: "Kaohsiung"
+        pingtung: "Pingtung"
+
+        east: "East"
+        hualien: "Hualien"
+        taitung: "Taitung"
+
+        islands: "Islands"
+        lanyu: "Orchid Island"
+        green_island: "Green Island"
+        kinmen: "Kinmen"
+        lienkiang: "Matsu Islands"
+        penghu: "Penghu"
+
+
+        slogan: "Taiwan camping companion  Created by camping
+    lovers for camping lovers"
+
+
+
   # home:
-  #   banner:
-  #     title: "All i need is a campsite and good company"
-  #     subtitle: "Discover your nature stay for tonight"
+  #   title: "All i need is a campsite and good company"
+  #   subtitle: "Discover your nature stay for tonight"
+#     header: "Camping style"
+#     glamping: "Glamping"
+#     private: "Private Campsite"
+#     wild: "Wild Camping"
+#     header_2: "Search on map"
+#     share_your_secret: "Share your secret spot"
+#     post_a_campsite: "Post a campsite"
+#     header_3: "Locations"
+#     slogan: "Taiwan camping companion  Created by camping
+# lovers for camping lovers"
 
-  home:
-    title: "All i need is a campsite and good company"
-    subtitle: "Discover your nature stay for tonight"
-    header: "Camping style"
-    glamping: "Glamping"
-    private: "Private Campsite"
-    wild: "Wild Camping"
-    header_2: "Search on map"
-    share_your_secret: "Share your secret spot"
-    post_a_campsite: "Post a campsite"
-    header_3: "Locations"
-    slogan: "Taiwan camping companion  Created by camping
-lovers for camping lovers"
+#     north: "North"
+#     keelong: "Keelong"
+#     taipei: "Taipei"
+#     new_taipei: "New Taipei"
+#     yilan: "Yilan"
+#     taoyuan: "Taoyuan"
+#     hsinchu: "Hsinchu"
 
-    north: "North"
-    keelong: "Keelong"
-    taipei: "Taipei"
-    new_taipei: "New Taipei"
-    yilan: "Yilan"
-    taoyuan: "Taoyuan"
-    hsinchu: "Hsinchu"
+#     central: "Central"
+#     maoli: "Maoli"
+#     taichung: "Taichung"
+#     changhwa: "Changhwa"
+#     nantou: "Nantou"
+#     yunlin: "Yunlin"
 
-    central: "Central"
-    maoli: "Maoli"
-    taichung: "Taichung"
-    changhwa: "Changhwa"
-    nantou: "Nantou"
-    yunlin: "Yunlin"
+#     south: "South"
+#     chiayi: "Chiayi"
+#     tainan: "Tainan"
+#     kaohsiung: "Kaohsiung"
+#     pingtung: "Pingtung"
 
-    south: "South"
-    chiayi: "Chiayi"
-    tainan: "Tainan"
-    kaohsiung: "Kaohsiung"
-    pingtung: "Pingtung"
+#     east: "East"
+#     hualien: "Hualien"
+#     taitung: "Taitung"
 
-    east: "East"
-    hualien: "Hualien"
-    taitung: "Taitung"
-
-    islands: "Islands"
-    lanyu: "Orchid Island"
-    green_island: "Green Island"
-    kinmen: "Kinmen"
-    lienkiang: "Matsu Islands"
-    penghu: "Penghu"
+#     islands: "Islands"
+#     lanyu: "Orchid Island"
+#     green_island: "Green Island"
+#     kinmen: "Kinmen"
+#     lienkiang: "Matsu Islands"
+#     penghu: "Penghu"
