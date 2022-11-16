@@ -31,7 +31,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link text-green-dark" %>
+            <%= link_to t("devise.sessions.new.sign_in"), new_user_session_path, class: "nav-link text-green-dark" %>
           <li>
         <% end %>
       </ul>
