@@ -1,23 +1,11 @@
 <h1><%= t(:campsite) %><%="(#{@campsites.length})"%></h1>
   <% @campsites.each do |campsite| %>
     <br>
-    <%# <%= link_to campsite_path(campsite) do %>
-      <strong><%= campsite.name %></strong>
-    <%# <% end %> %> %>
-    <br>
-    <%= t(:category) %>:<%= campsite.category.capitalize %>
+    <strong><%= link_to campsite.name, campsite_path(campsite) %></strong>
     <br>
     <%= t(:address) %>:<%= campsite.address %>
     <br>
-    <%= t(:county) %>:<%= campsite.county %>
+    <%= t(:category) %>:<%= campsite.category.capitalize %>
     <br>
-    <%= t(:area) %>:<%= campsite.area %>
-    <br>
-    <%= t(:website) %>:<%= campsite.website %>
-    <br>
-    <%= t(:phone) %>:<%= campsite.phone %>
-    <br>
-    <% link_to "view", campsites_show_path(campsite), :class => "btn btn-dark-grey" %>
   <% end %>
-    <%# <% link_to "campsite", controller: "campsites", action: "show", id: @campsite %> %>
   <br>

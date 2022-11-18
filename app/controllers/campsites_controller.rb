@@ -4,6 +4,12 @@ class CampsitesController < ApplicationController
     @campsites = Campsite.all
   end
 
+  def create
+    @campsite = Campsite.new(campsite_params)
+    @campsite.save
+    redirect_to campsite_path(@campsite)
+  end
+
   def show
     @campsite = Campsite.find(params[:id])
   end
