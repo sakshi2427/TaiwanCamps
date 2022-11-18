@@ -80,3 +80,6 @@ gem "devise", "~> 4.8"
 # i18n
 gem 'rails-i18n', '~> 7.0.0'
 gem 'devise-i18n', '~> 1.2'
+
+# Simple form
+gem "simple_form", github: "heartcombo/simple_form"

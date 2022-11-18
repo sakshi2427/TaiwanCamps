@@ -1,0 +1,13 @@
+<h1><%= t(:campsite) %><%="(#{@campsites.length})"%></h1>
+  <% @campsites.each do |campsite| %>
+    <br>
+    <strong><%= link_to campsite.name, campsite_path(campsite) %></strong>
+    <br>
+    <%= t(:address) %>:<%= campsite.address %>
+    <br>
+    <%= t(:category) %>:<%= campsite.category.capitalize %>
+    <br>
+  <% end %>
+  <br>
+
+  <%= link_to 'Back Home', root_path %>
