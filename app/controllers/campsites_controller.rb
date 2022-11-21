@@ -4,6 +4,10 @@ class CampsitesController < ApplicationController
     @campsites = Campsite.all
   end
 
+  def new
+    @campsite = Campsite.new
+  end
+
   def create
     @campsite = Campsite.new(campsite_params)
     @campsite.save

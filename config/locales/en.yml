@@ -50,6 +50,9 @@ en:
   navbar:
     find_campsite: "Find a campsite"
     contribute: "Contribute"
+    signed_in_as: "Welcome %{user_first_name}"
+    contributions: "My contributions"
+    favourites: "My favourites"
   pages:
     home:
       hero:
@@ -98,6 +101,11 @@ en:
       footer:
         slogan: "Taiwan camping companion  Created by camping
     lovers for camping lovers"
+
+  new:
+    title: Post a campsite
+    description: Do you know a secret campsite that is not on our list yet? If you would like to post it on the website, please fill out the form below.
+    mandatory: '* = Mandatory'
 
 
 
