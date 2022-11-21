@@ -51,7 +51,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Buttons & inputs' radius
-$border-radius:    10rem;
+// $border-radius:    10rem;
 
 // Link
 $link-decoration:  none;
