@@ -60,8 +60,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
   gem 'capybara'
   gem 'database_cleaner'
 
