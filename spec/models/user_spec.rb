@@ -55,9 +55,17 @@ RSpec.describe User, type: :model do
       subject.password = ""
       expect(subject).not_to be_valid
     end
-  end
-  describe "validations" do
-    subject.password = "test@test.com"
-    it { should validate_uniqueness_of(:email) }
+
+    # it 'should validate uniqueness of email' do
+    #   email1 = FactoryBot.create(:user, email: 'email@blackducksoftware.com')
+    #   email2 = FactoryBot.build(:user, email: 'email@blackducksoftware.com' )
+    #   should validate_uniqueness_of(:email)
+    # end
+
+    describe "Uniqueness" do
+      subject { FactoryBot.build(:user) }
+      it { should validate_uniqueness_of(:email) }
+    end
+
   end
 end
