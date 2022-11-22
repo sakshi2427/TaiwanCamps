@@ -55,11 +55,9 @@ RSpec.describe User, type: :model do
       subject.password = ""
       expect(subject).not_to be_valid
     end
-
-    # describe "validations" do
-    #   subject.password = "test@test.com"
-      it { should validate_uniqueness_of(:email) }
-    # end
-
+  end
+  describe "validations" do
+    subject.password = "test@test.com"
+    it { should validate_uniqueness_of(:email) }
   end
 end
