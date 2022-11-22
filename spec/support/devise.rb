@@ -1,7 +1,8 @@
 require_relative './controller_macros'
 
 RSpec.configure do |config|
-  # For Devise > 4.1.1
+  config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include Warden::Test::Helpers
   config.extend ControllerMacros, :type => :controller
 end

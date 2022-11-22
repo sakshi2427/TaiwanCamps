@@ -1,10 +1,65 @@
 require 'rails_helper'
-# require "spec_helper"
 
 RSpec.describe User, type: :model do
-   it "requires a name to be valid" do
-    user = User.new(first_name: nil)
 
-    expect(user).not_to be_valid
+  # subject {
+  # described_class.new(first_name: "Pauline",
+  #                     last_name: "Rouger",
+  #                     email: "test@test.com",
+  #                     password: "123456",)
+  # }
+
+  subject { FactoryBot.build(:user) }
+
+  describe "Validations" do
+    it "is valid with valid attributes" do
+      expect(subject).to be_valid
+    end
+
+    it 'is not valid without a first name' do
+      subject.first_name = nil
+      expect(subject).not_to be_valid
+    end
+
+    it "is not valid with a empty first name" do
+      subject.first_name = ""
+      expect(subject).not_to be_valid
+    end
+
+      it 'is not valid without a last name' do
+      subject.last_name = nil
+      expect(subject).not_to be_valid
+    end
+
+    it "is not valid with a empty last name" do
+      subject.last_name = ""
+      expect(subject).not_to be_valid
+    end
+
+    it "is not valid without an email" do
+      subject.email = nil
+      expect(subject).to_not be_valid
+    end
+
+    it "is not valid with a empty email" do
+      subject.email = ""
+      expect(subject).to_not be_valid
+    end
+
+    it "is not valid without a password" do
+      subject.password = nil
+      expect(subject).to_not be_valid
+    end
+
+    it "is not valid with a empty password" do
+      subject.password = ""
+      expect(subject).not_to be_valid
+    end
+
+    # describe "validations" do
+    #   subject.password = "test@test.com"
+      it { should validate_uniqueness_of(:email) }
+    # end
+
   end
 end

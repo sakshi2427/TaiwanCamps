@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_presence_of :email, :first_name, :last_name
-  validates :email, uniqueness: true
+  validates_uniqueness_of :email
   validates_length_of :first_name, :last_name, maximum: 20
   validates_format_of :email,:with => Devise::email_regexp
 

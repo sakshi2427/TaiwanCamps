@@ -10,7 +10,8 @@ require 'factory_bot_rails'
 # Add these after require 'rspec/rails'
 require 'devise'
 require_relative 'support/controller_macros'
-
+require_relative 'support/devise'
+require_relative 'support/chrome'
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -68,11 +69,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  # Setup automated login in test
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
-    config.include Devise::Test::ControllerHelpers, :type => :controller
-    config.include FactoryBot::Syntax::Methods
-    config.extend ControllerMacros, :type => :controller
 end
