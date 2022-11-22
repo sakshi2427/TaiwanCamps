@@ -23,5 +23,8 @@ module TaiwanCamps
     config.i18n.available_locales = [:en, :zh]
     # Our default locale
     config.i18n.default_locale = :en
+
+    # Set test framework to be rspec
+    config.generators.test_framework = :rspec
   end
 end
