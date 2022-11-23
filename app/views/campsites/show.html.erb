@@ -1,4 +1,5 @@
 <div class="container mt-5">
+  <%= link_to 'Back', campsites_path %>
   <div class="row">
     <div class="col">
       <h2><%= @campsite.name %></h2>
@@ -10,20 +11,19 @@
 
       <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
        <div class="container mb-5">
-        <%# <%= render 'reviews/form', campsite: @campsite, review: @review %>
+       <%= render 'reviews/form', campsite: @campsite, review: @review %>
       </div>
-      <h4><%= pluralize @campsite.reviews.size, "review" %></h5>
+      <h5><%= pluralize @campsite.reviews.size, "review" %></h5>
 
       <div id="reviews" data-insert-in-list-target="items">
         <% if @campsite.reviews.blank? %>
           Be the first to leave a review for <%= @campsite.name %>
         <% else %>
           <% @campsite.reviews.each do |review| %>
-            <%= render 'review', review: review %>
+            <%= render 'campsites/review', review: review %>
           <% end %>
         <% end %>
       </div>
     </div>
   </div>
-    <%= link_to 'Back', campsites_path %>
 </div>
