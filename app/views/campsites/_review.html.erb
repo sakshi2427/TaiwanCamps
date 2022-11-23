@@ -1,3 +1,13 @@
 <p id="review-<%= review.id %>">
-<%= review.content %></p>
-<p><%= review.rating %></p>
+<%= review.user.first_name %>
+<br>
+<%= time_ago_in_words(review.created_at) %>
+<br>
+<%= review.content %>
+<br>
+<%  review.rating.to_i.times do  %>
+  <i class="bi bi-star-fill"></i>
+<% end %>
+<% (5 - review.rating.to_i).times do %>
+  <i class="bi bi-star"></i>
+<% end %></p>

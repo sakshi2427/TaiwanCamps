@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_presence_of :email, :first_name, :last_name
-  validates_uniqueness_of :email
-  validates_length_of :first_name, :last_name, maximum: 20
-  validates_length_of :password, minimum: 6
-  validates_format_of :email, with: Devise::email_regexp
+  validates :email, :first_name, :last_name, presence: true
+  validates :email, uniqueness: true
+  validates :first_name, :last_name, length: { maximum: 20 }
+  validates :password, length: { minimum: 6 }
+  validates :email, format: { with: Devise::email_regexp }
 
 end

@@ -16,6 +16,7 @@ class CampsitesController < ApplicationController
 
   def show
     @campsite = Campsite.find(params[:id])
+    @review = Review.new
   end
 
   private
