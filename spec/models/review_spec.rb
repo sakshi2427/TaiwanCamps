@@ -6,8 +6,7 @@ RSpec.describe Review, type: :model do
     before { FactoryBot.build(:user) }
     it { should validate_presence_of(:content) }
     it { should validate_presence_of(:rating) }
-    it { should validate_length_of(:rating).is_at_least(1) }
-    it { should validate_length_of(:rating).is_at_most(5) }
+    it { should validate_inclusion_of(:rating).in_range(1..5) }
     it { should validate_length_of(:content).is_at_most(200) }
   end
 
