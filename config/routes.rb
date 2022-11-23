@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /en|zh/ do
     root to: 'pages#home'
     resources :campsites do
-      resources :reviews, only: [:new]
+      resources :reviews, only: [:new, :create]
     end
   end
 end

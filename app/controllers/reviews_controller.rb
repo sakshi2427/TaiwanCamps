@@ -9,26 +9,26 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.campsite = @campsite
     @review.save
-    # if @review.save
-    #   redirect_to campsite_path(@campsite)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
-    respond_to do |format|
-      if @review.save
-        format.html { redirect_to restaurant_path(@restaurant, anchor: "review-#{@review.id}") }
-        format.json # Follow the classic Rails flow and look for a create.json view
-      else
-        format.html { render 'restaurants/show' }
-        format.json # Follow the classic Rails flow and look for a create.json view
-      end
+    if @review.save
+      redirect_to campsite_path(@campsite)
+    else
+      render :new, status: :unprocessable_entity
     end
+    # respond_to do |format|
+    #   if @review.save
+    #     format.html { redirect_to restaurant_path(@restaurant, anchor: "review-#{@review.id}") }
+    #     format.json # Follow the classic Rails flow and look for a create.json view
+    #   else
+    #     format.html { render 'restaurants/show' }
+    #     format.json # Follow the classic Rails flow and look for a create.json view
+    #   end
+    # end
   end
 
   private
 
   def set_campsite
-    @campsite = campsite.find(params[:campsite_id])
+    @campsite = Campsite.find(params[:campsite_id])
   end
 
   def review_params

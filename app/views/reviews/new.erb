@@ -1,0 +1,7 @@
+<%= "Submit a review for #{@campsite.name}" %>
+
+<%= simple_form_for [@campsite, @review] do |f| %>
+  <%= f.input :content, as: :text, input_html: { maxlength: 500 } %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
