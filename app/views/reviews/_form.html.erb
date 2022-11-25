@@ -1,0 +1,8 @@
+<%= t("new.mandatory") %>
+<br>
+<%= simple_form_for([@campsite, @campsite.reviews.build]) do |f| %>
+  <%= f.input :content, placeholder: 'Add review', as: :text, input_html: { maxlength: 500 } %>
+  <%= f.input :rating, collection: 0..5, selected: 0 %>
+  <br>
+	<%= f.button :submit, class: "btn btn-green-dark" %>
+<% end %>
