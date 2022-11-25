@@ -1,4 +1,10 @@
-<h1><%= t(:campsite) %><%="(#{@campsites.length})"%></h1>
+<%= link_to 'Back Home', root_path %>
+<div>
+
+</div>
+
+<div>
+  <h1><%= t(:campsite) %><%="(#{@campsites.length})"%></h1>
   <% @campsites.each do |campsite| %>
     <br>
     <strong><%= link_to campsite.name, campsite_path(campsite) %></strong>
@@ -9,5 +15,4 @@
     <br>
   <% end %>
   <br>
-
-  <%= link_to 'Back Home', root_path %>
+</div>
