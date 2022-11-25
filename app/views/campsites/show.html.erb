@@ -1,40 +1,41 @@
 <div class="container mt-5">
   <%= link_to 'Back', campsites_path %>
+  <br>
+  <br>
   <div class="row">
     <div class="col">
       <h2><%= @campsite.name %></h2>
-      <h2 class="avg-rating">Average Rating</h2>
-			<div class="average-review-rating"<%= @average_review %>></div>
-			<span class="number-of-reviews">Based on <%= @campsite.reviews.count %> reviews</span>
-
-
+			<p><% @average_review.to_i.times do  %>
+        <i class="bi bi-star-fill"></i>
+      <% end %>
+      <% (5 - @average_review.to_i).times do %>
+        <i class="bi bi-star"></i>
+      <% end %>
+      <span class="number-of-reviews">(<%= @campsite.reviews.count %>)</span>
+      </p>
       <p><%= @campsite.category.capitalize %></p>
+      <br>
       <p><%= @campsite.address %></p>
       <p><%= @campsite.phone %></p>
       <p><%= @campsite.website %></p>
       <br>
 
-
     <div class="reviews">
-      <!-- Where the reviews/ratings will go -->
       <div>
         <%= link_to "Add Review", new_campsite_review_path(@campsite), class: "btn btn-green-dark" %>
-      </div>
-      <div>
-
       </div>
       <br>
       <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
        <div class="container mb-5">
         </div>
-        <h5><%= pluralize @campsite.reviews.size, "review" %></h5>
+      <h5><%= pluralize @campsite.reviews.size, "review" %></h5>
 
-        <div id="reviews" data-insert-in-list-target="items">
-          <% if @campsite.reviews.blank? %>
-            Be the first to leave a review for <%= @campsite.name %>
-          <% else %>
-            <%= render @campsite.reviews %>
-          <% end %>
+      <div id="reviews" data-insert-in-list-target="items">
+        <% if @campsite.reviews.blank? %>
+          Be the first to leave a review for <%= @campsite.name %>
+        <% else %>
+          <%= render @campsite.reviews %>
+        <% end %>
       </div>
     </div>
   </div>
