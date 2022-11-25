@@ -9,20 +9,24 @@
       <p><%= @campsite.website %></p>
       <br>
 
+
+    <div class="reviews">
+      <!-- Where the reviews/ratings will go -->
+      <div>
+        <%= link_to "Add Review", new_campsite_review_path(@campsite), class: "btn btn-green-dark" %>
+      </div>
+      <br>
       <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
        <div class="container mb-5">
-       <%= render 'reviews/form', campsite: @campsite, review: @review %>
-      </div>
-      <h5><%= pluralize @campsite.reviews.size, "review" %></h5>
+        </div>
+        <h5><%= pluralize @campsite.reviews.size, "review" %></h5>
 
-      <div id="reviews" data-insert-in-list-target="items">
-        <% if @campsite.reviews.blank? %>
-          Be the first to leave a review for <%= @campsite.name %>
-        <% else %>
-          <% @campsite.reviews.each do |review| %>
-            <%= render 'campsites/review', review: review %>
+        <div id="reviews" data-insert-in-list-target="items">
+          <% if @campsite.reviews.blank? %>
+            Be the first to leave a review for <%= @campsite.name %>
+          <% else %>
+            <%= render @campsite.reviews %>
           <% end %>
-        <% end %>
       </div>
     </div>
   </div>

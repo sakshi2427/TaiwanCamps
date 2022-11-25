@@ -19,6 +19,11 @@ class CampsitesController < ApplicationController
     @review = Review.new
   end
 
+  # def destroy
+  #   Campsite.find(params[:id]).destroy
+  #   redirect_to campsites_path
+  # end
+
   private
 
   def campsite_params
