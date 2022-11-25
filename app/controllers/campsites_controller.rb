@@ -1,4 +1,6 @@
 class CampsitesController < ApplicationController
+  before_action :find_campsite, only: [:show]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @campsites = Campsite.all
@@ -15,8 +17,12 @@ class CampsitesController < ApplicationController
   end
 
   def show
-    @campsite = Campsite.find(params[:id])
     @review = Review.new
+    if @campsite.reviews.blank?
+			@average_review = 0
+		else
+			@average_review = @campsite.reviews.average(:rating).round(2)
+		end
   end
 
   # def destroy
@@ -25,6 +31,10 @@ class CampsitesController < ApplicationController
   # end
 
   private
+
+  def find_campsite
+    @campsite = Campsite.find(params[:id])
+  end
 
   def campsite_params
     params.require(:campsite).permit(:name, :category, :address, :county, :postal_code, :area, :website, :phone)

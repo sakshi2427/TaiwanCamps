@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :find_campsite, only: %i[new create]
+  before_action :find_review, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
   def new
@@ -10,7 +11,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.campsite_id = @campsite.id
-    # @review.campsite = @campsite
     @review.save
     if @review.save
       redirect_to campsite_path(@campsite, anchor: "review-#{@review.id}")
@@ -18,6 +18,19 @@ class ReviewsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def update
+		if @review.update(review_params)
+			redirect_to campsite_path(@campsite)
+		else
+			render :edit
+		end
+	end
+
+	def destroy
+		@review.destroy
+		redirect_to campsite_path(@campsite)
+	end
 
   private
 
@@ -32,5 +45,4 @@ class ReviewsController < ApplicationController
   def find_review
     @review = Review.find(params[:id])
   end
-
 end
