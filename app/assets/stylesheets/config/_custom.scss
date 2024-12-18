@@ -33,7 +33,7 @@ $theme-colors: (
   "dark":         $grey-dark,
 ) !default;
 
-// Custom variales and colors
+// Custom variables and colors
 $custom-colors: (
   "green-dark":   $green-dark,
   "green":        $green,
@@ -56,6 +56,3 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Link
 $link-decoration:  none;
 $link-color:       $grey-dark;
-
-// Required bootstrap
-@import '../node_modules/bootstrap/scss/bootstrap';
