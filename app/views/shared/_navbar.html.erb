@@ -1,38 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-  <div class="container-fluid"> 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
-      <ul class="navbar-nav"> 
-        <li class="nav-item active"> 
-          <%= link_to t("navbar.find_campsite"), campsites_path, class: "nav-link text-green-dark" %> 
-        </li> 
-        <li class="nav-item"> 
-          <%= link_to t("navbar.contribute"), new_campsite_path, class: "nav-link text-green-dark" %> 
-        </li> 
-        <li class="nav-item"> 
-          <%= link_to image_tag("logo/logo_grey.png", style: "height: 120px"), root_path %> 
-        </li> 
-        <li class="nav-item dropdown"> 
-          <%= link_to t('home.language'), "#", class: "text-green-dark btn btn-white-bg dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> 
-          <div class="languagelink dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> 
-            <%= link_to t("language.english"), root_path(locale: :en), class: "dropdown-item" %> 
-            <%= link_to t("language.traditional_chinese"), root_path(locale: :zh), class: "dropdown-item" %> 
-          </div> 
-        </li> 
-        <% if user_signed_in? %> 
-          <li class="nav-item dropdown text-green-dark"> 
-            <%= link_to t("navbar.signed_in_as", user_first_name: current_user.first_name.capitalize), new_user_session_path, class: "nav-link text-green-dark", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> 
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> 
-              <%= link_to "My contributions", "#", class: "dropdown-item" %> 
-              <%= link_to "My favourites", "#", class: "dropdown-item" %> 
-              <%= link_to t("devise.sessions.new.sign_out"), destroy_user_session_path, method: :delete, class: "dropdown-item", data: {turbo_method: :delete} %> 
-            </div> 
-          </li> 
-        <% else %> 
-          <li class="nav-item"> 
-            <%= link_to t("devise.sessions.new.sign_in"), new_user_session_path, class: "nav-link text-green-dark" %> 
-          <li> 
-        <% end %> 
-      </ul> 
-    </div> 
-  </div> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <li class="nav-item active">
+          <%= link_to t("navbar.find_campsite"), campsites_path, class: "nav-link text-green-dark" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t("navbar.contribute"), new_campsite_path, class: "nav-link text-green-dark" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to image_tag("logo/logo_grey.png", style: "height: 120px"), root_path %>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to t('home.language'), "#", class: "text-green-dark btn btn-white-bg dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="languagelink dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to t("language.english"), root_path(locale: :en), class: "dropdown-item" %>
+            <%= link_to t("language.traditional_chinese"), root_path(locale: :zh), class: "dropdown-item" %>
+          </div>
+        </li>
+
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown text-green-dark">
+            <%= link_to t("navbar.signed_in_as", user_first_name: current_user.first_name.capitalize), new_user_session_path, class: "nav-link text-green-dark", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "My contributions", "#", class: "dropdown-item" %>
+              <%= link_to "My favourites", "#", class: "dropdown-item" %>
+              <%= link_to t("devise.sessions.new.sign_out"), destroy_user_session_path, method: :delete, class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t("devise.sessions.new.sign_in"), new_user_session_path, class: "nav-link text-green-dark" %>
+          <li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </nav>

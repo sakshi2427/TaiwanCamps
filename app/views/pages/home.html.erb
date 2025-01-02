@@ -1,206 +1,229 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/hero.png') %>);"> 
-  <div class="container"> 
-    <h1 class="card-title pb-4 text-white"><%= t('pages.home.hero.title') %></h1> 
-    <h3 class="card-text text-white"><%= t('pages.home.hero.subtitle') %></h3> 
-  </div> 
-</div> 
-<div class="container p-4"> 
-  <h2 class="header pt-4 pb-4"><%= t('pages.home.camping_type.header') %></h2> 
-  <div class="cards"> 
-    <%= link_to "#" do %> 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/glamping.png') %>)"> 
-        <%= t('pages.home.camping_type.glamping') %> 
-      </div> 
-    <% end %> 
-    <%= link_to "#" do %> 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/private.png') %>)"> 
-        <%= t('pages.home.camping_type.private') %> 
-      </div> 
-    <% end %> 
-    <%= link_to "#" do %> 
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/wild.png') %>)"> 
-        <%= t('pages.home.camping_type.wild') %> 
-      </div> 
-    <% end %> 
-  </div> 
-</div> 
-<div class="container p-4"> 
-  <h2 class="header"><%= t('pages.home.map_research.header') %></h2> 
-</div> 
-<div class="container p-4"> 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/secret_spot.png') %>);"> 
-    <div class="text-center"> 
-      <h1 class="card-title"><%= t('pages.home.contribute.share_your_secret') %></h1> 
-      <%= link_to t('pages.home.contribute.post_a_campsite'), new_campsite_path, class: "btn btn-green-dark" %> 
-    </div> 
-  </div> 
-</div> 
-<div class="container pt-4 pb-8 map"> 
-  <h2 class="header"><%= t('pages.home.locations.header') %></h2> 
-</div> 
-<div class="p-4"> 
-  <!--Grid row--> 
-  <div class="row"> 
-  <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-    </div> 
-    <!--Grid column--> 
-    <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-      <h4 class="area text-green-dark"><%= t("home.north") %></h4> 
-      <ul class="list-unstyled mb-0"> 
-        <li> 
-          <%= link_to t('home.taipei'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.new_taipei'), "#", class: "text-grey-dark" %> 
-        <li> 
-          <%= link_to t('home.keelong'), "#", class: "text-grey-dark" %> 
-        </li> 
-        </li> 
-        <li> 
-          <%= link_to t('home.yilan'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.taoyuan'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.hsinchu'), "#", class: "text-grey-dark" %> 
-        </li> 
-      </ul> 
-    </div> 
-    <!--Grid column--> 
-    <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-      <h5 class="area text-green-dark"><%= t("home.central") %></h5> 
-      <ul class="list-unstyled mb-0"> 
-        <li> 
-          <%= link_to t('home.maoli'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.taichung'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.changhwa'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.nantou'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.yunlin'), "#", class: "text-grey-dark" %> 
-        </li> 
-      </ul> 
-    </div> 
-    <!--Grid column--> 
-    <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-      <h4 class="area text-green-dark"><%= t("home.south") %></h4> 
-      <ul class="list-unstyled mb-0"> 
-        <li> 
-          <%= link_to t('home.chiayi'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.tainan'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.kaohsiung'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.pingtung'), "#", class: "text-grey-dark" %> 
-        </li> 
-      </ul> 
-    </div> 
-    <!--Grid column--> 
-    <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-      <h4 class="area text-green-dark"><%= t("home.east") %></h4> 
-      <ul class="list-unstyled mb-0"> 
-        <li> 
-          <%= link_to t('home.hualien'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.taitung'), "#", class: "text-grey-dark" %> 
-        </li> 
-      </ul> 
-    </div> 
-    <!--Grid column--> 
-    <!--Grid column--> 
-    <div class="col-lg-2 col-md-6 mb-4 mb-md-0"> 
-      <h4 class="area text-green-dark"><%= t("home.islands") %></h4> 
-      <ul class="list-unstyled mb-0"> 
-        <li> 
-          <%= link_to t('home.lanyu'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.green_island'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.kinmen'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.lienkiang'), "#", class: "text-grey-dark" %> 
-        </li> 
-        <li> 
-          <%= link_to t('home.penghu'), "#", class: "text-grey-dark" %> 
-        </li> 
-      </ul> 
-    </div> 
-    <!--Grid column--> 
-  </div> 
-  <!--Grid row--> 
-</div> 
-<footer class="bg-green-dark"> 
-  <!-- Grid container --> 
-  <div class="container p-4"> 
-    <!--Grid row--> 
-    <div class="row my-4"> 
-      <!--Grid column--> 
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0"> 
-        <div class="d-flex align-items-center justify-content-center"> 
-          <div class="logo"> 
-            <%= link_to image_tag("logo/logo_white.png", style: "height: 170px"), root_path %> 
-          </div> 
-        </div> 
-        <p class="text-center text-white"><%= t("pages.home.footer.slogan") %></p> 
-      </div> 
-      <!--Grid column--> 
-      <!--Grid column--> 
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0"> 
-        <ul class="list-unstyled"> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">About Us</a> 
-          </li> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">Contact Us</a> 
-          </li> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">FAQ</a> 
-          </li> 
-        </ul> 
-      </div> 
-      <!--Grid column--> 
-      <!--Grid column--> 
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0"> 
-        <ul class="list-unstyled"> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">Camping Beginner</a> 
-          </li> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">Privacy Policy</a> 
-          </li> 
-          <li class="mb-2"> 
-            <a href="#!" class="text-light">Terms & Conditions</a> 
-          </li> 
-        </ul> 
-      </div> 
-      <!--Grid column--> 
-      <!--Grid column--> 
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0"> 
-        <h5 class="text-white mb-4">Language</h5> 
-      </div> 
-      <!--Grid column--> 
-    </div> 
-    <!--Grid row--> 
-  </div> 
-  <!-- Grid container --> 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/hero.png') %>);">
+  <div class="container">
+    <h1 class="card-title pb-4 text-white"><%= t('pages.home.hero.title') %></h1>
+    <h3 class="card-text text-white"><%= t('pages.home.hero.subtitle') %></h3>
+  </div>
+</div>
+
+<div class="container p-4">
+  <h2 class="header pt-4 pb-4"><%= t('pages.home.camping_type.header') %></h2>
+  <div class="cards">
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/glamping.png') %>)">
+        <%= t('pages.home.camping_type.glamping') %>
+      </div>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/private.png') %>)">
+        <%= t('pages.home.camping_type.private') %>
+      </div>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('home/wild.png') %>)">
+        <%= t('pages.home.camping_type.wild') %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container p-4">
+  <h2 class="header"><%= t('pages.home.map_research.header') %></h2>
+</div>
+
+<div class="container p-4">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('home/secret_spot.png') %>);">
+    <div class="text-center">
+      <h1 class="card-title"><%= t('pages.home.contribute.share_your_secret') %></h1>
+      <%= link_to t('pages.home.contribute.post_a_campsite'), "#", class: "btn btn-green-dark" %>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-4 pb-8 map">
+  <h2 class="header"><%= t('pages.home.locations.header') %></h2>
+</div>
+
+<div class="p-4">
+  <!--Grid row-->
+  <div class="row">
+  <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+      <h4 class="area text-green-dark"><%= t("home.north") %></h4>
+
+      <ul class="list-unstyled mb-0">
+        <li>
+          <%= link_to t('home.taipei'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.new_taipei'), "#", class: "text-grey-dark" %>
+        <li>
+          <%= link_to t('home.keelong'), "#", class: "text-grey-dark" %>
+        </li>
+        </li>
+        <li>
+          <%= link_to t('home.yilan'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.taoyuan'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.hsinchu'), "#", class: "text-grey-dark" %>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+      <h5 class="area text-green-dark"><%= t("home.central") %></h5>
+
+      <ul class="list-unstyled mb-0">
+        <li>
+          <%= link_to t('home.maoli'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.taichung'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.changhwa'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.nantou'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.yunlin'), "#", class: "text-grey-dark" %>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+      <h4 class="area text-green-dark"><%= t("home.south") %></h4>
+
+      <ul class="list-unstyled mb-0">
+        <li>
+          <%= link_to t('home.chiayi'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.tainan'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.kaohsiung'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.pingtung'), "#", class: "text-grey-dark" %>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+      <h4 class="area text-green-dark"><%= t("home.east") %></h4>
+
+      <ul class="list-unstyled mb-0">
+        <li>
+          <%= link_to t('home.hualien'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.taitung'), "#", class: "text-grey-dark" %>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+      <h4 class="area text-green-dark"><%= t("home.islands") %></h4>
+
+      <ul class="list-unstyled mb-0">
+        <li>
+          <%= link_to t('home.lanyu'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.green_island'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.kinmen'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.lienkiang'), "#", class: "text-grey-dark" %>
+        </li>
+        <li>
+          <%= link_to t('home.penghu'), "#", class: "text-grey-dark" %>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</div>
+
+<footer class="bg-green-dark">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row my-4">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="logo">
+            <%= link_to image_tag("logo/logo_white.png", style: "height: 170px"), root_path %>
+          </div>
+        </div>
+        <p class="text-center text-white"><%= t("pages.home.footer.slogan") %></p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="#!" class="text-light">About Us</a>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="text-light">Contact Us</a>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="text-light">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="#!" class="text-light">Camping Beginner</a>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="text-light">Privacy Policy</a>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="text-light">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-white mb-4">Language</h5>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
 </footer>
